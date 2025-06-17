@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/checkout.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHaven - Checkout</title>
+    <link rel="stylesheet" href="./GreenHaven - Checkout_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./GreenHaven - Checkout_files/styles.css">
+    <link href="./GreenHaven - Checkout_files/css2" rel="stylesheet">
+<style id="__web-inspector-hide-shortcut-style__">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+</style></head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/index1.html">GreenHaven</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/about.html">About</a>
+                    </li>
+                    <li class="nav-item auth-links" id="auth-links">
+                    <a class="nav-auth-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/profile.html" data-action="profile">PlanTito</a>
+                    <span class="auth-divider">|</span>
+                    <a class="nav-auth-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/logout.html" data-action="logout">Logout</a>
+                </li>
+                    <li class="nav-item cart-wrapper">
+                        <a class="nav-link cart-link" href="file:///C:/Users/Hans/OneDrive/Desktop/Hans%20-%20Ecom%201/cart.html" title="View Cart">
+                            <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.707 15.293C4.077 15.923 4.523 17 5.414 17H17M17 17C15.895 17 15 17.895 15 19C15 20.105 15.895 21 17 21C18.105 21 19 20.105 19 19C19 17.895 18.105 17 17 17ZM9 19C9 20.105 9.895 21 11 21C12.105 21 13 20.105 13 19C13 17.895 12.105 17 11 17C9.895 17 9 17.895 9 19Z" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span class="cart-badge" id="cart-badge">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content: Checkout Section -->
+    <!-- Note: Optimize cart item images (<100KB, use WebP with JPG fallback) -->
+    <section class="checkout-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2>Checkout</h2>
+            </div>
+            <div class="row">
+                <!-- Order Summary -->
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-3">Order Summary</h3>
+                    <div class="card" style="background: #fff; border: none; border-radius: 12px; padding: 20px;">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Pot Color</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-items">
+                                    <!-- Populated by JavaScript -->
+                                <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                
+                                Monstera Deliciosa
+                            </div>
+                        </td>
+                        <td>White</td>
+                        <td>1</td>
+                        <td>₱1,499</td>
+                    </tr></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3" class="text-end"><strong>Grand Total:</strong></td>
+                                        <td id="grand-total">₱1,499</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkout Form -->
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Delivery &amp; Payment</h3>
+                    <form class="contact-form">
+                        <!-- Delivery Address -->
+                        <div class="form-group">
+                            <label for="address">Delivery Address:</label>
+                            <textarea id="address" name="address" placeholder="Enter your delivery address" rows="4" required="">123 Green Street, Plant City, Philippines</textarea>
+                        </div>
+                        <!-- Contact Number -->
+<div class="form-group">
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" pattern="[0-9]{11}" required="">
+</div>
+                        <!-- Delivery Notes -->
+                        <div class="form-group">
+                            <label for="notes">Delivery Notes (Optional):</label>
+                            <textarea id="notes" name="notes" placeholder="E.g., Leave at front door" rows="3"></textarea>
+                        </div>
+                        <!-- Payment Method -->
+                        <div class="form-group">
+                            <label>Payment Method:</label>
+                            <div class="d-flex flex-column gap-2">
+                                <div>
+                                    <input type="radio" id="credit-card" name="payment-method" value="credit-card" required="">
+                                    <label for="credit-card" style="color: #1f2937; margin-left: 8px;">Credit Card</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="paypal" name="payment-method" value="paypal">
+                                    <label for="paypal" style="color: #1f2937; margin-left: 8px;">PayPal</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="cod" name="payment-method" value="cod">
+                                    <label for="cod" style="color: #1f2937; margin-left: 8px;">Cash on Delivery</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Warning Note -->
+                        <div class="warning-note mb-3">
+                            <p><strong>Important:</strong> Orders cannot be canceled once proceeded. For Cash on Delivery, your account will be suspended if delivery fails after three attempts.</p>
+                        </div>
+                        <!-- Place Order Button -->
+                        <button type="button" class="form-submit-btn place-order-btn">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 GreenHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./GreenHaven - Checkout_files/bootstrap.min.js" defer=""></script>
+    <script>
+        // Update cart badge from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.querySelector('#cart-items');
+            const grandTotalElement = document.querySelector('#grand-total');
+            const cartBadge = document.querySelector('#cart-badge');
+
+            let grandTotal = 0;
+            let totalQuantity = 0;
+
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<tr><td colspan="4" class="text-center">Your cart is empty.</td></tr>';
+                cartBadge.textContent = '0';
+                grandTotalElement.textContent = '₱0';
+            } else {
+                cartItems.forEach(item => {
+                    const total = item.price * item.quantity;
+                    grandTotal += total;
+                    totalQuantity += item.quantity;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="${item.image}" srcset="${item.image.replace('.jpg', '.webp')} 1x" alt="${item.name}" style="max-height: 50px; width: 50px; object-fit: cover; margin-right: 10px;">
+                                ${item.name}
+                            </div>
+                        </td>
+                        <td>${item.color.charAt(0).toUpperCase() + item.color.slice(1)}</td>
+                        <td>${item.quantity}</td>
+                        <td>₱${total.toLocaleString()}</td>
+                    `;
+                    cartItemsContainer.appendChild(row);
+                });
+
+                grandTotalElement.textContent = `₱${grandTotal.toLocaleString()}`;
+                cartBadge.textContent = totalQuantity;
+            }
+
+            // Update navbar based on login state
+            const authLinks = document.querySelector('#auth-links');
+            const user = localStorage.getItem('user') || 'PlanTito'; // Demo user
+            const isLoggedIn = !!user; // Simulate logged-in state
+
+            if (isLoggedIn) {
+                authLinks.innerHTML = `
+                    <a class="nav-auth-link" href="profile.html" data-action="profile">${user}</a>
+                    <span class="auth-divider">|</span>
+                    <a class="nav-auth-link" href="logout.html" data-action="logout">Logout</a>
+                `;
+            } else {
+                authLinks.innerHTML = `
+                    <a class="nav-auth-link" href="signup.html" data-action="signup">Sign Up</a>
+                    <span class="auth-divider">|</span>
+                    <a class="nav-auth-link" href="login.html" data-action="login">Login</a>
+                `;
+            }
+        });
+
+        // Add click event to navigation links and interactive elements
+        document.querySelectorAll('.nav-link, .cart-link, .nav-auth-link, .place-order-btn, .contact-link').forEach(element => {
+            element.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (element.classList.contains('nav-link') || element.classList.contains('cart-link') || element.classList.contains('nav-auth-link') || element.classList.contains('contact-link')) {
+                    const href = element.getAttribute('href');
+                    if (href && href !== '#') {
+                        element.classList.add('clicked');
+                        setTimeout(() => {
+                            element.classList.remove('clicked');
+                            window.location.href = href;
+                        }, 200);
+                    }
+                } else if (element.classList.contains('place-order-btn')) {
+                    element.classList.add('clicked');
+                    setTimeout(() => {
+                        element.classList.remove('clicked');
+                        const address = document.querySelector('#address').value;
+                        const notes = document.querySelector('#notes').value;
+                        const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
+                        if (!address || !paymentMethod) {
+                            alert('Please provide a delivery address and select a payment method.');
+                            return;
+                        }
+                        console.log(`Order placed: Address: ${address}, Notes: ${notes}, Payment: ${paymentMethod}`);
+                        alert('Order placed successfully (demo)!');
+                        localStorage.removeItem('cart');
+                        document.querySelector('#cart-badge').textContent = '0';
+                        window.location.href = 'index.html';
+                    }, 200);
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+        };
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Zoom detection
+        function checkZoom() {
+            const zoomLevel = window.devicePixelRatio * 100;
+            const navbarCollapse = document.querySelector('#navbarNav');
+            if (zoomLevel >= 101) {
+                navbarCollapse.classList.add('collapse');
+            } else {
+                navbarCollapse.classList.remove('collapse');
+            }
+        }
+        window.addEventListener('resize', checkZoom);
+        window.addEventListener('load', checkZoom);
+    </script>
+
+</body></html>
